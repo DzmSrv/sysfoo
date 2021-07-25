@@ -18,6 +18,11 @@ jobs:
       - run:
           name: Build
           command: mvn -B -DskipTests clean package
+      - store_artifacts:
+          path: /tmp/art-1
+          destination: artifact-file
+      - store_artifacts:
+          path: /tmp/artifacts
       # Then run your tests!
       - run:
           name: Test
@@ -31,3 +36,4 @@ workflows:
   sample: 
     jobs:
       - build-and-test
+    
