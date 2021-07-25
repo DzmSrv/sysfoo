@@ -21,8 +21,6 @@ jobs:
       - store_artifacts:
           path: /home/circleci/project/target/sysfoo.war
           destination: sysfoo.war
-      - store_artifacts:
-          path: /home/circleci/project/target/sysfoo.war
       # Then run your tests!
       - run:
           name: Test
